@@ -14,16 +14,11 @@
 
     
     <!-- Quick Actions -->
-    <div class="grid lg:grid-cols-2 gap-4 p-4">
+    <div class="grid lg:grid-cols-3 gap-4 p-4">
         <div class="card" style="text-align: left; transition: transform 0.2s; cursor: pointer;" onclick="window.location.href='/knowledge-base'">
             <div style="font-size: 2rem; margin-bottom: 1rem;">📚</div>
             <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Browse Knowledge Base</h3>
             <p style="color: #64748b;">Find answers in our comprehensive knowledge base</p>
-        </div>
-        <div class="card" style="text-align: left; transition: transform 0.2s; cursor: pointer;" onclick="window.location.href='/tickets'">
-            <div style="font-size: 2rem; margin-bottom: 1rem;">📋</div>
-            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Workshops ,Trainings and Conferences</h3>
-            <p style="color: #64748b;">View and manage your workshops and conferences</p>
         </div>
         
         <div class="card" style="text-align: left; transition: transform 0.2s; cursor: pointer;" onclick="window.location.href='/tickets/create'">

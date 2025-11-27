@@ -353,7 +353,8 @@
                         </li>
                     @endauth
                     @guest
-                        <li><a href="/auth/workos">Login</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
                     @endguest
                 </ul>
             </div>
@@ -420,18 +421,7 @@
             }
         });
     </script>
- <script async
- src="https://g43kpaqcf35c36jviqbbeqwi.agents.do-ai.run/static/chatbot/widget.js"
- data-agent-id="8f8a0e67-aeb0-11f0-b074-4e013e2ddde4"
- data-chatbot-id="5uSasRSMtpSzuoNvMvhs-V_PzdHjerK4"
- data-name="PRAZ  Chatbot"
- data-primary-color="#0c7d1b"
- data-secondary-color="#E5E8ED"
- data-button-background-color="#0c7d1b"
- data-starting-message="Hello! How can I help you today?"
- data-logo="/static/chatbot/icons/default-agent.svg">
-</script>
-    
+
     @stack('scripts')
 </body>
 </html>
