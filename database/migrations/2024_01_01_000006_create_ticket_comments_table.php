@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('ticket_comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('ticket_id')->constrained('tickets')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->uuid('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->longText('comment');
             $table->boolean('is_internal')->default(false); // Internal notes vs customer-facing
             $table->boolean('is_ai_generated')->default(false);

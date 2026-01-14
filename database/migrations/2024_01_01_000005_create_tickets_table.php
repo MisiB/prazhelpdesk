@@ -19,8 +19,10 @@ return new class extends Migration
             $table->enum('status', ['open', 'in_progress', 'waiting_customer', 'resolved', 'closed'])->default('open');
             $table->enum('priority', ['low', 'medium', 'high', 'urgent'])->default('medium');
             $table->foreignId('category_id')->nullable()->constrained('categories')->onDelete('set null');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // Customer
-            $table->foreignId('assigned_to')->nullable()->constrained('users')->onDelete('set null'); // Agent
+            $table->uuid('user_id'); // Customer
+            $table->uuid('assigned_to')->nullable(); // Agent
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('assigned_to')->references('id')->on('users')->onDelete('set null');
             $table->integer('crm_customer_id')->nullable(); // Reference to prazcrmadmin customer
             $table->integer('crm_ticket_id')->nullable(); // Synced ticket ID from prazcrmadmin
             $table->json('ai_suggestions')->nullable(); // AI-generated suggestions
