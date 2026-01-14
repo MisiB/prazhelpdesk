@@ -134,7 +134,7 @@ class Ticket extends Model
     /**
      * Scope for assigned tickets
      */
-    public function scopeAssignedTo($query, int $userId)
+    public function scopeAssignedTo($query, string $userId)
     {
         return $query->where('assigned_to', $userId);
     }
@@ -169,7 +169,7 @@ class Ticket extends Model
     /**
      * Assign ticket to an agent
      */
-    public function assignTo(int $agentId)
+    public function assignTo(string $agentId)
     {
         $this->update([
             'assigned_to' => $agentId,
