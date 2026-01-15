@@ -23,7 +23,7 @@
             </div>
         @endif
 
-        <!-- WorkOS SSO Login -->
+        {{-- <!-- WorkOS SSO Login -->
         <div style="margin-bottom: 2rem;">
             <a href="{{ route('auth.workos.redirect') }}" 
                class="btn btn-primary" 
@@ -38,7 +38,7 @@
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 0 1rem; color: #64748b; font-size: 0.875rem;">
                 or
             </div>
-        </div>
+        </div> --}}
 
         <!-- Email/Password Login (Traditional) -->
         <form method="POST" action="{{ route('login') }}">
@@ -95,7 +95,7 @@
             </p>
         </div>
 
-        <!-- SSO Connections -->
+        {{-- <!-- SSO Connections -->
         <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
             <p style="text-align: center; color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">
                 Sign in with your organization
@@ -126,7 +126,7 @@
                     Sign in with Microsoft
                 </a>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <!-- Help Text -->

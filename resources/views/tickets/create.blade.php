@@ -59,9 +59,11 @@
                             <select name="issuegroup_id" class="form-select" required>
                                 <option value="">Select category</option>
                                 @foreach ($settings->issuegroups as $category)
-                                    <option value="{{ $category->id }}" {{ old('issuegroup_id') == $category->id ? 'selected' : '' }}>
-                                        {{ $category->name }}
-                                    </option>
+                                    @if(strtolower($category->name) !== 'internal')
+                                        <option value="{{ $category->id }}" {{ old('issuegroup_id') == $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
