@@ -47,6 +47,12 @@ return [
         'timeout' => env('PRAZCRMADMIN_API_TIMEOUT', 30),
     ],
 
+    'helpdesk' => [
+        'url' => env('HELPDESK_API_BASE_URL', ''),
+        'api_key' => env('HELPDESK_API_KEY', ''),
+        'timeout' => env('HELPDESK_API_TIMEOUT', 30),
+    ],
+
     'workos' => [
         'api_key' => env('WORKOS_API_KEY'),
         'client_id' => env('WORKOS_CLIENT_ID'),
